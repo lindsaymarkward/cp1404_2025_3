@@ -9,12 +9,18 @@ from random import randint
 
 
 def main():
+    low, high = get_limits()
+    print(randint(low, high))
+
+
+def get_limits() -> tuple[int, int]:
     low = int(input("Low: "))
     high = int(input("High: "))
     while low >= high:
         print(f"Invalid. High number must be > {low}")
         high = int(input("High: "))
-    print(randint(low, high))
+    return low, high
 
 
-main()
+if __name__ == '__main__':
+    main()
