@@ -9,20 +9,20 @@ from random import randint
 
 
 def main():
-    # Get both limits
-    low, high = get_limits()
-    print(randint(low, high))
+    """Docstring."""
+    print("Hello")
+    do_random_number()
+    # that's it
 
 
-def get_limits() -> tuple[int, int]:
+def do_random_number():
+    # Get boundaries
     low = int(input("Low: "))
     high = int(input("High: "))
     while low >= high:
-        print(f"Invalid. High number must be > {low}")
+        print("Error")
         high = int(input("High: "))
-    return low, high
+    print(":) " * randint(low, high))
 
 
-if __name__ == '__main__':
-    # Run the program only if imported
-    main()
+main()
